@@ -1,28 +1,30 @@
-# Titanium Dioxide Exposure & Regulatory Risk Intelligence  
-### U.S. Cosmetics Industry (Power BI | SQL | Data Modeling | DAX)
+# Cosmetic Safety & Regulatory Risk Analysis
+### U.S. Cosmetics Industry (2009–2020)
+#### (Power BI | SQL | Data Modeling | DAX)
 
 ---
 
 ## Project Overview
 
-This project analyzes **Titanium Dioxide exposure across the U.S. cosmetics industry** to assess **regulatory, reformulation, and compliance risk** at the **product, category, and company level**.
+This project analyzes **chemical safety and regulatory exposure across the U.S. cosmetics industry**, using public regulatory disclosures to identify **systemic risk patterns** at the **market, category, and company level.**
 
-Titanium Dioxide is one of the most widely used cosmetic ingredients and is under increasing regulatory scrutiny due to potential carcinogenic and respiratory risks.  
-The goal of this project is to move beyond simple counts and percentages and build a **decision-grade risk intelligence dashboard**.
+The study began as a **broad chemical risk assessment** across all regulated ingredients.
+Through exploratory analysis, **Titanium Dioxide emerged as the most dominant and structurally embedded chemical**, accounting for the majority of product-level exposure and representing the **largest potential regulatory risk** to the industry.
+
+The final outcome is a **decision-grade risk intelligence dashboard** focused on **where regulation would have the greatest impact.**
 
 ---
 
 ## Business Problem
 
-Regulators, cosmetic brands, and investors need to answer:
+Cosmetics companies, regulators, and investors face growing pressure around ingredient safety, but lack clarity on:
 
-- How deeply is the cosmetics industry dependent on Titanium Dioxide?
-- Which product categories are most exposed?
-- Which companies face the highest regulatory and reformulation risk?
-- Who would be impacted the most if Titanium usage were restricted or banned?
+- Which regulated chemicals drive the majority of market exposure?
+- Whether chemical risk is concentrated or systemic
+- Which product categories are structurally dependent on high-risk ingredients
+- Which companies face the highest reformulation and compliance risk
 
-This project provides **data-backed answers** to these questions.
-
+This project answers those questions using data-driven evidence, not assumptions.
 ---
 
 ## Dataset
@@ -39,13 +41,29 @@ Each record represents the usage of a regulated chemical in a cosmetic product.
 
 ---
 
+## Analytical Approach
+
+### Phase 1: Exploratory Chemical Risk Analysis
+1. Assessed frequency and spread of all regulated chemicals
+2. Measured market penetration across products, categories, and companies
+3. Identified chemicals with systemic presence vs niche usage
+
+**Key Finding:** Titanium Dioxide dominates the exposure landscape — far exceeding all other chemicals in both volume and breadth.
+
+### Phase 2: Titanium-Focused Risk Deep Dive
+Once Titanium Dioxide was identified as the primary driver, analysis pivoted to:
+1. Market-wide dependency measurement
+2. Category-level structural exposure
+3. Company-level absolute risk concentration
+4. Time-based reporting trends
+
 ## Data Engineering & Modeling
 
 ### Data Pipeline
 1. Raw CSV ingestion
 2. Python-based data cleaning and normalization
 3. SQL validation and aggregation
-4. Power BI semantic model & DAX measures
+4. Power BI semantic modeling with DAX
 
 ### Star Schema Design
 
@@ -88,20 +106,20 @@ Companies are ranked using **absolute Titanium exposure**, not just percentages,
 ## Dashboard Pages
 
 ### Market Overview
-- Total products, chemicals, companies
-- Overall Titanium penetration
-- Trend of product reporting over time
+- Market scale and chemical landscape
+- Titanium penetration vs all chemicals
+- Reporting trends over time
 
 ### Category Risk Analysis
-- Titanium penetration by product category
-- Category-level exposure comparison
-- Identification of high-dependency categories
+- Titanium dependency by product category
+- Identification of structurally exposed categories
+- Products-at-risk volume by category
 
 ### Company Risk Analysis
 - Company-level Titanium risk score
-- Risk band classification (High / Medium / Low)
-- Scatter analysis: product volume vs penetration
-- Top companies by regulatory exposure
+- Risk band segmentation
+- Exposure landscape (volume × penetration)
+- Top firms by regulatory risk concentration
 
 ---
 
@@ -110,13 +128,14 @@ Companies are ranked using **absolute Titanium exposure**, not just percentages,
 ### Market-Level
 - **86.6% of cosmetic products contain Titanium Dioxide**
 - Dependency has remained consistently high over 12 years
+- No other regulated chemical shows comparable penetration
 
 ### Category-Level
-- Makeup, Nail Products, and Oral Hygiene show **extreme dependency**
+- Makeup, Nail, Oral Hygiene, and Tattoo products show **near-total dependency**
 - Hair care (non-coloring) shows relatively lower exposure
 
 ### Company-Level
-- Large brands carry **highest absolute exposure**, not just high percentages
+- Risk is **concentrated among large, high-volume brands**
 - Regulatory action would disproportionately impact **market leaders**
 - Reformulation risk is **systemic**, not isolated
 
@@ -124,12 +143,12 @@ Companies are ranked using **absolute Titanium exposure**, not just percentages,
 
 ## Business Impact
 
-This dashboard can support:
+This analysis can support:
 
-- **Regulators** → Assess potential market disruption from chemical restrictions  
+- **Regulators** → Estimate market disruption before policy action 
 - **Cosmetic companies** → Prioritize reformulation strategies  
 - **Investors** → Identify hidden regulatory risk  
-- **Compliance teams** → Monitor chemical exposure trends  
+- **Compliance teams** → Monitor structural ingredient risk
 
 ---
 
@@ -142,32 +161,17 @@ This dashboard can support:
 
 ---
 
-## Repository Structure
-
-/data
-├── raw/
-├── cleaned/
-
-/sql
-├── validation_queries.sql
-
-/powerbi
-├── titanium_risk_dashboard.pbix
-
-/notebooks
-├── data_cleaning.ipynb
-
-README.md
-
----
-
 ## Key Takeaway
 
-This project demonstrates **end-to-end analytical thinking** — from raw regulatory data to a business-ready risk intelligence system — and shows how BI can be used to **anticipate regulatory and compliance risk**, not just report metrics.
+This project demonstrates how **exploratory analysis can uncover systemic risk** and how Business Intelligence can be used not just to report metrics, but to **anticipate regulatory and business impact.**
 
+Titanium Dioxide was not assumed to be the risk — the data revealed it.
 ---
 
 ## Author
 
 **Abhinav Noel Norbert**  
+
 Business Intelligence & Data Analytics  
+
+Former Management Consultant
