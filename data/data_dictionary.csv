@@ -1,0 +1,23 @@
+column,type,label,description
+CDPHId,text,CDPHId,"The California Department of Public Health (CDPH) internal identification number for product. Note that the CDPHId may appear more than once if a product has more than one Color/Scent/Flavor, more than one Category, or more than one Chemical Name/CAS number reported."
+ProductName,text,ProductName,"Product name as entered by manufacturer, packer and/or distributor. The product name is entered as free-text into the reporting database and may contain misspellings or other errors."
+CSFId,text,CSFId,CDPH internal identification number for a color/scent/flavor.
+CSF,text,CSF,"Color, scent and/or flavor as entered by manufacturer, packer and/or distributor. The color/scent/flavor name is entered as free-text into the reporting database and may contain misspellings or other errors. Not all products have specific colors, scents or flavors."
+CompanyId,text,CompanyId,CDPH internal identification number for company.
+CompanyName,text,CompanyName,"Company name as entered by manufacturer, packer and/or distributor. The company name is entered as free-text into the reporting database and may contain misspellings or other errors."
+BrandName,text,BrandName,"Brand name as entered by manufacturer, packer and/or distributor. The brand name is entered as free-text into the reporting database and may contain misspellings or other errors."
+PrimaryCategoryId,text,PrimaryCategoryId,CDPH internal identification number for category.
+PrimaryCategory,text,PrimaryCategory,"Type of product (13 primary categories: Baby Products, Bath Products, Fragrances, Hair Care Products (non-coloring), Hair Coloring Products, Makeup Products (non-permanent), Nail Products, Oral Hygiene Products, Personal Care Products, Shaving Products, Skin Care Products, Sun-Related Products, Tattoos and Permanent Makeup). See attachment for sub-categories within each primary category (Cosmetics-Chemicals-CA-CDPH-DataDictionary-Subcategories.csv)."
+SubCategoryId,text,SubCategoryId,CDPH internal identification number for subcategory.
+SubCategory,text,SubCategory,Type of product within one of the 13 primary categories. See attachment for sub-categories within each primary category (Cosmetics-Chemicals-CA-CDPH-DataDictionary-Subcategories.xls).
+CasId,text,CasId,CDPH internal identification number for chemical.
+CasNumber,text,CasNumber,"Chemical identification number (Chemical Abstracts Service registry number assigned to specific chemical). Note that different forms of a chemical  may have different CAS numbers. What appears here is the CAS number selected by the manufacturer, packer and/or distributor."
+ChemicalId,text,ChemicalId,CDPH internal identification number for this chemical's record specific to this product.
+ChemicalName,text,ChemicalName,"Name of chemical substance in cosmetic product. Note that chemical substances may have more than one Chemical Name. What appears here is the chemical name selected by the manufacturer, packer and/or distributor. The California Safe Cosmetics Act  requires cosmetics companies to report products containing ingredients known or suspected to cause cancer or developmental or reproductive harm."
+InitialDateReported,timestamp,InitialDateReported,"Date the product profile was created by manufacturer, packer and/or distributor, that is, the date that the product was first reported to CDPH."
+MostRecentDateReported,timestamp,MostRecentDateReported,"Date the product profile was last modified by manufacturer, packer and/or distributor. The product profile contains all information about the product with the exception of chemical information, which is stored separately. This field defaults to the InitialDateReported value initially."
+DiscontinuedDate,timestamp,DiscontinuedDate,"If applicable, date the product was discontinued."
+ChemicalCreatedAt,timestamp,ChemicalCreatedAt,The date that this chemical was first reported to CDPH for this product.
+ChemicalUpdatedAt,timestamp,ChemicalUpdatedAt,"Date this chemical report was last modified by manufacturer, packer and/or distributor. This field is unique from the product profile. This field defaults to the ChemicalCreatedAt value initially."
+ChemicalDateRemoved,timestamp,ChemicalDateRemoved,"If applicable, date the chemical was removed from product, i.e., reformulation."
+ChemicalCount,numeric,ChemicalCount,Total number of current chemicals reported for this product. This number does not include chemicals that have been removed from a product. This number is a calculated field based on current reporting.
